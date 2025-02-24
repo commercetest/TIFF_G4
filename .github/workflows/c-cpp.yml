@@ -14,6 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: make
-      run: linux/make
+      run: make
+      working-directory: linux
     - name: check executable
       run: bash -c "[[ -x linux/demo ]]"
